@@ -22,7 +22,7 @@ The framework consists of two stages:
 
 
 <p align="center">
-<img src="figures/framework.png" width="850">
+<img src="structure.png" width="850">
 </p>
 
 
