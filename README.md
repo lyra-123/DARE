@@ -43,3 +43,50 @@ Install dependencies:
 
 ```bash
 pip install -r requirements.txt
+
+# Code Structure
+
+The repository is organized as follows:
+
+## Baselines
+
+`baselines/` contains the implementations of comparison methods.
+
+- `CASVA/`: CASVA implementation.
+- `DAO/`: DAO implementation.
+- `FHVAC/`: FHVAC implementation.
+- `ILCAS/`: ILCAS implementation.
+- `LCA/`: LCA implementation.
+
+
+## Decision Tree Construction
+
+`decision_tree/` implements decision tree construction and video clustering.
+
+- `extract_deg_feature.py`: Extracts degradation-aware features from video sessions.
+- `sensitivity.py`: Calculates the sensitivity of encoding parameters for each session.
+- `tree_train.py`: Trains the decision tree based on degradation features and sensitivity.
+- `apply_tree.py`: Applies the trained decision tree for cluster identification.
+
+
+## Encoding Parameter Model
+
+`encoding_parameter_model/` implements the encoding decision model training and inference.
+
+- `deg_feats/`: Stores degradation feature data used for model training.
+- `utils/`: Utility functions for training and evaluation.
+- `DAgger_train.py`: Trains the encoding decision model using DAgger-based imitation learning.
+- `env.py`: Defines the training environment.
+- `env_fix.py`: Defines the evaluating environment.
+- `Expert.py`: Implements the expert policy for generating training labels.
+- `network.py`: Defines the neural network architecture.
+- `replay_memory.py`: Implements replay memory for training.
+- `test.py`: Evaluates the trained encoding decision model.
+- `utils.py`: Provides general utility functions.
+
+
+## Online Decision
+
+`online_switching.py` implements the online adaptive encoding decision process, including degradation feature extraction and encoding model selection.
+
+
