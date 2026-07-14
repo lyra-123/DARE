@@ -12,13 +12,13 @@ DARE addresses this problem by exploiting degradation-aware encoding sensitivity
 The framework consists of two stages:
 
 - **Offline stage:** 
-  - Encoding sensitivity analysis
-  - Degradation pattern identification using decision trees
-  - Encoding policy training using imitation learning
+  - Session-level encoding sensitivity analysis to identify dominant encoding parameters
+  - Decision tree construction and video clustering
+  - Encoding algorithms training using imitation learning
 
 - **Online stage:**
   - Real-time degradation feature extraction
-  - Pattern-aware encoding decision selection
+  - Encoding parameter model selection
 
 
 <p align="center">
