@@ -195,21 +195,4 @@ python DARE/online_switching.py
 ```
 ---
 
-
-# Evaluation
-
-
-DARE is evaluated using:
-
-- F1-score for analytics accuracy.
-- End-to-end latency for system efficiency.
-
-
-Run evaluation:
-
-```bash
-python evaluation/test.py
-```
-
-
----
+Note: This code is released in conjunction with a manuscript currently under peer review. It is provided to substantiate the key findings but is not the final, fully-featured version. We anticipate releasing the complete codebase upon acceptance.
