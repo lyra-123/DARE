@@ -1,4 +1,4 @@
-# DARE: Towards Video Analytics in Adverse Capture Environments: A Quality-Degradation-Aware Adaptive Encoding Framework
+# Towards Video Analytics in Adverse Capture Environments: A Quality-Degradation-Aware Adaptive Encoding Framework
 
 
 ## Introduction
