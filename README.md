@@ -5,7 +5,7 @@
 
 This repository contains the implementation of **DARE**, a quality-degradation-aware adaptive encoding framework for real-time video analytics under bandwidth constraints.
 
-DARE first calculates the encoding parameter sensitivity for each video session, then constructs a decision tree to identify the dominant encoding parameters, and finally trains encoding decision algorithms using imitation learning for adaptive configuration selection.
+DARE first calculates the encoding parameter sensitivity for each video session, then constructs a decision tree to identify the dominant encoding parameters, and finally trains encoding decision algorithms using imitation learning for adaptive encoding parameter selection.
 
 The framework consists of two stages:
 
