@@ -45,12 +45,14 @@ DARE/
 └── DARE/
     │
     ├── decision_tree/
+    │   ├── model_data/
     │   ├── extract_deg_feature.py
     │   ├── sensitivity.py
     │   ├── tree_train.py
     │   └── apply_tree.py
     │
-    ├── encoding_policy/
+    ├── encoding_parameter_model/
+    │   ├── model_data/
     │   ├── deg_feats/
     │   ├── utils/
     │   ├── DAgger_train.py
@@ -81,16 +83,18 @@ The `baselines/` directory contains the implementations of comparison methods.
 
 The `decision_tree/` directory implements session-level sensitivity analysis and decision tree construction for degradation pattern identification.
 
+- `model_data/`: Stores trained decision tree models and related model files.
 - `extract_deg_feature.py`: Extracts degradation-aware features from video sessions.
 - `sensitivity.py`: Calculates the sensitivity of encoding parameters for each session.
 - `tree_train.py`: Trains the decision tree based on degradation features and encoding parameter sensitivity.
 - `apply_tree.py`: Applies the trained decision tree for cluster identification.
 
 
-## Encoding Parameter Model Training
+## Encoding Parameter Algorithm Training
 
 The `encoding_policy/` directory implements the training and inference of encoding decision aglorithms.
 
+- `model_data/`: Stores trained encoding decision models and related model files.
 - `deg_feats/`: Stores degradation feature data used for model training.
 - `utils/`: Contains utility functions for training and evaluation.
 - `DAgger_train.py`: Trains the encoding decision aglorithm using DAgger-based imitation learning.
