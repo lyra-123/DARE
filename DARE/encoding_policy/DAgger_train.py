@@ -234,9 +234,9 @@ def train_IL():
 
                     state = np.roll(state, -1, axis=1)
                     state[0, -1] = bw
-                    state[3, -1] = qp
-                    state[4, -1] = skip
-                    state[5, -1] = re
+                    state[1, -1] = qp
+                    state[2, -1] = skip
+                    state[3, -1] = re
                     state = torch.from_numpy(state)
                 # memory.push([states, actions, f1s, seq_ids, chunk_ids])
                 video = {
