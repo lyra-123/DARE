@@ -153,8 +153,8 @@ def train_IL():
             # 获取时间列（若有多列，可根据列名调整）
             time_values = df.iloc[:, 3].tolist()  # 取第一列作为时间数据
             # 检查长度是否为100
-            if len(time_values) != 100:
-                print(f"⚠️ 警告：文件 {file} 中的时间数为 {len(time_values)}，不是100！")
+            if len(time_values) != 125:
+                print(f"⚠️ 警告：文件 {file} 中的时间数为 {len(time_values)}，不是125！")
             # 添加到大列表中
             all_datasets_times.append(time_values)
 
