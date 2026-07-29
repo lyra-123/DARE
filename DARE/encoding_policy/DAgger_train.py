@@ -171,8 +171,6 @@ def train_IL():
 
         while True:
             net_env = env.Environment(ALL_BW[0], merged_data_map_train)
-            state = np.zeros((S_INFO, S_LEN))
-            state = torch.from_numpy(state)
             current_video_id = 0
             for seq_id in range(SEQ_TOTAL):
                 if current_video_id < 3 and seq_id == dataset_map[current_video_id]:
@@ -194,6 +192,8 @@ def train_IL():
                 seq_ids = []
                 chunk_ids = []
 
+                state = np.zeros((S_INFO, S_LEN))
+                state = torch.from_numpy(state)
                 deg_state = np.zeros((S_LEN, D_INFO))
                 deg_state = torch.from_numpy(deg_state)
                 end_of_video = False
