@@ -74,13 +74,12 @@ def valid(shared_model,epoch,log_file,val_all_chunks,merged_data_map,merged_deg_
     env=env_fix.Environment(cooked_bw=cooked_bw,seq_chunk_data=merged_data_map,seq_chunks=0,start=2,seq_id=0)
 
     for seq_id in range(SEQ_TOTAL):
-        if val_wl is not None and seq_id not in val_wl:
-            continue
-
-        valid_count+=1
-
         if current_video_id<3 and seq_id==dataset_map[current_video_id]:
             current_video_id+=1
+        if current_video_id == 0 or current_video_id == 3:
+                    net_env.FRAME = FRAMES[0]
+                else:
+                    net_env.FRAME = FRAMES[1]
 
         env.FRAME=FRAMES[0] if current_video_id==0 or current_video_id==3 else FRAMES[1]
         env.F1=[]
